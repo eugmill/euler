@@ -16,7 +16,7 @@ def get_prime_factors(n)
 	return [n] if is_prime(n)
 	(2...n/2).each do |x|
 		if n%x ==0
-			return get_prime_factors(x).concat(get_prime_factors(n/x))
+			return get_prime_factors(x)+get_prime_factors(n/x)
 		end
 	end
 end
