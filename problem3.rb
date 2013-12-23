@@ -6,7 +6,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 def is_prime(n)
 	return false if n==1
-	(2...n/2).each do |x|
+	(2..n/2).each do |x|
 		return false if n%x==0
 	end
 	true
