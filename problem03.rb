@@ -21,8 +21,8 @@ def get_prime_factors(n)
 	end
 end
 
-puts get_prime_factors(13195).max == 29
-puts get_prime_factors(600851475143).max
+#puts get_prime_factors(13195).max == 29
+#puts get_prime_factors(600851475143).max
 
 
 

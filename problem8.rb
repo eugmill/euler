@@ -8,4 +8,23 @@ BIG_NUM_STR = "73167176531330624919225119674426574742355349194934969835203127745
 
 # Any product of 5 consecutive integers must be divisible by 120.
 # Therefore any product will end in 20, 40, 60, 80 or 00
+#
+# There are 1+2+3+4+...+n substrings in a string
+# Equivalent to (n)(n+1) / 2
+# In this case about half a million
+# Only some of these will be divisible by 120, which reduces the search space
 
+def get_all_substrings(input_string)
+	substrings = []
+	(1..input_string.length).each do |substring_length|
+		puts substring_length
+		(0..input_string.length-substring_length).each do |x|
+			substrings.push(input_string.slice(x,substring_length))
+		end
+	end
+	substrings
+end
+
+bignum_substrings =  get_all_substrings(BIG_NUM_STR)
+puts "complete"
+puts bignum_substrings.length

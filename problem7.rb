@@ -12,7 +12,7 @@ What is the 10 001st prime number?
 
 # Solution is rather slow, optimize later. 
 
-require './problem3.rb'
+require './problem03.rb'
 
 def i_th_prime(n)
 	prime_index=0
